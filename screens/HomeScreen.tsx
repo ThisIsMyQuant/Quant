@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <ImageBackground source={require('../assets/background.png')} style={styles.background}>
       <View style={styles.container}>
-        <Text>Welcome to the Home Screen!</Text>
+        <Text> to the Home Screen!</Text>
       </View>
     </ImageBackground>
   );
