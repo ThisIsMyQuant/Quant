@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, StyleSheet } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import StockScreen from '../screens/StockScreen';
+import { SFSymbol } from "react-native-sfsymbols";
 
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +30,11 @@ export default function TabNavigator() {
         tabBarInactiveTintColor: 'gray',
       }}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen 
+        name="Home" 
+        component={HomeScreen} 
+        
+      />
       <Tab.Screen name="Stock" component={StockScreen} />
     </Tab.Navigator>
   );

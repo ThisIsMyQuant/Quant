@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
-import Square from '../components/Square'; // Ensure the correct import path
+import Square from '../components/Square';
+import Tall from '../components/Tall'; 
 
 export default function HomeScreen() {
   return (
@@ -16,30 +17,7 @@ export default function HomeScreen() {
         </View>
         <View style={styles.mainContainer}>
           <Square />
-          <View style={styles.portfolioCard}>
-            <Text style={styles.portfolioValue}>$69,420</Text>
-            <Text style={styles.portfolioChange}>+24.9% Day</Text>
-            <Text style={styles.portfolioYTD}>+140.9% YTD</Text>
-          </View>
-          <View style={styles.moversContainer}>
-            <Text style={styles.moversTitle}>Today's Top Movers</Text>
-            <View style={styles.mover}>
-              <Text style={styles.moverSymbol}>AAPL</Text>
-              <Text style={styles.moverChange}>4.20% 190.84 +4.69</Text>
-            </View>
-            <View style={styles.mover}>
-              <Text style={styles.moverSymbol}>MSTR</Text>
-              <Text style={styles.moverChange}>-3.69% 1290.22 -132.23</Text>
-            </View>
-            <View style={styles.mover}>
-              <Text style={styles.moverSymbol}>NVDA</Text>
-              <Text style={styles.moverChange}>+2.20% 1190.42 +89.79</Text>
-            </View>
-            <View style={styles.mover}>
-              <Text style={styles.moverSymbol}>MSFT</Text>
-              <Text style={styles.moverChange}>-2.30% 336.84 -20.69</Text>
-            </View>
-          </View>
+          <Tall />
           <View style={styles.newsContainer}>
             <Text style={styles.newsTitle}>Top News Headlines</Text>
             <Text style={styles.newsItem}>Trump Considering An Advisory Role For Musk</Text>
