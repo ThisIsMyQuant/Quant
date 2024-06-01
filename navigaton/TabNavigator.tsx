@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import StockScreen from '../screens/StockScreen';
-import { SFSymbol } from "react-native-sfsymbols";
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,20 +12,8 @@ export default function TabNavigator() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarStyle: {
-          backgroundColor: 'rgba(0, 0, 0, 0.25)',
-          borderRadius: 100,
-          borderTopWidth: 0,
-          position: 'absolute',
-          bottom: 10,
-          left: 10,
-          right: 10,
-          height: 70,
-        },
-        tabBarLabelStyle: {
-          fontSize: 12,
-          fontWeight: 'bold',
-        },
+        tabBarShowLabel: false,
+        tabBarStyle: styles.tabBar,
         tabBarActiveTintColor: 'white',
         tabBarInactiveTintColor: 'gray',
       }}
@@ -33,21 +21,39 @@ export default function TabNavigator() {
       <Tab.Screen 
         name="Home" 
         component={HomeScreen} 
-        
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Icon name="home" color={color} size={24} style={styles.icon} />
+          ),
+        }}
       />
-      <Tab.Screen name="Stock" component={StockScreen} />
+      <Tab.Screen 
+        name="Stock" 
+        component={StockScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Icon name="stats-chart" color={color} size={24} style={styles.icon} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
 
 const styles = StyleSheet.create({
-  tabBarContainer: {
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
+  icon: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tabBar: {
+    backgroundColor: 'rgba(0, 0, 0, 0.9)',
     borderRadius: 100,
+    borderTopWidth: 0,
     position: 'absolute',
-    bottom: 10,
+    bottom: 30,
     left: 10,
     right: 10,
     height: 70,
-  },
+    paddingBottom: 10,
+    },
 });

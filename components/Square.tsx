@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const Square = () => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Text style={styles.symbol}>▲AAPL</Text>
       <Text style={styles.price}>190.8</Text>
       <Text style={styles.details}>3.01T +4.20%</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
