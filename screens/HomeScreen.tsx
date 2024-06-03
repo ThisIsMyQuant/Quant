@@ -5,24 +5,29 @@ import Square from '../components/Square';
 import VerticalSquares from '../components/VerticalSquares';
 import FourSquare from '../components/FourSquare';
 import Tall from '../components/Tall'; 
+import TwoTall from '../components/TwoTall';
+import StockTile from '../components/Square/StockTile';
 
 export default function HomeScreen() {
   return (
-    <ImageBackground source={require('../assets/background.png')} style={styles.background}>
+    <ImageBackground source={require('../assets/bkgrnd.png')} style={styles.background}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <Header />
         <View style={styles.searchContainer}>
           <Text style={styles.searchText}>Ask Your Quant nything...</Text>
         </View>
+
         <View style={styles.mainContainer}>
+          <TwoTall />
+          <StockTile />
           <FourSquare />
-          
+          <Tall />
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>  
-          <VerticalSquares />
+          
           <VerticalSquares />
           </View>
 
-          <Tall />
+          
         </View>
       </ScrollView>
     </ImageBackground>
@@ -54,5 +59,7 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     flex: 1,
+    justifyContent: 'space-between',
+    gap: 15,
   },
 });

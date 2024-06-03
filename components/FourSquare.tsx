@@ -17,12 +17,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',   
     width: 400,
     height: 400,
-    marginBottom: 20,
   },
   square: {
     width: '50%',
     height: '50%',
-    padding: 6,
   },
 });
 

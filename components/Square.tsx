@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   details: {
     fontSize: 24,
-    color: 'green',
+    color: '#37c73d',
   },
 });
 

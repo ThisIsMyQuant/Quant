@@ -19,19 +19,20 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     header: {
-        fontSize: 24,
-        fontWeight: 'bold',
+        fontSize: 36,
+        fontWeight: '600',
         color: 'white',
         marginBottom: 5,
       },
       portfolioStatus: {
         fontSize: 24,
-        fontWeight: 'bold',
+        fontWeight: '500',
         color: 'white',
         marginBottom: 5,
       },
       dateText: {
         fontSize: 24,
+        fontWeight: '500',
         color: 'white',
       },
   });

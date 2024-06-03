@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const Square = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Today's Top Movers</Text>
+    <TouchableOpacity style={styles.container}>
+      <Text style={styles.title}>Watchlist</Text>
       <View style={styles.mover}>
         <View style={styles.symbolContainer}>
           <Text style={styles.upSymbol}>▲</Text>
@@ -12,7 +12,7 @@ const Square = () => {
         </View>
         <View style={styles.valuesContainer}>
           <Text style={styles.price}>190.84</Text>
-          <Text style={styles.priceChange}>+4.69</Text>
+          <Text style={styles.priceChange}>+4.69%</Text>
         </View>
       </View>
       <View style={styles.mover}>
@@ -22,7 +22,7 @@ const Square = () => {
         </View>
         <View style={styles.valuesContainer}>
           <Text style={styles.price}>1290.22</Text>
-          <Text style={styles.priceChangeDown}>-132.23</Text>
+          <Text style={styles.priceChangeDown}>-132.23%</Text>
         </View>
       </View>
       <View style={styles.mover}>
@@ -32,7 +32,7 @@ const Square = () => {
         </View>
         <View style={styles.valuesContainer}>
           <Text style={styles.price}>1190.42</Text>
-          <Text style={styles.priceChange}>+89.79</Text>
+          <Text style={styles.priceChange}>+89.79%</Text>
         </View>
       </View>
       <View style={styles.mover}>
@@ -42,10 +42,10 @@ const Square = () => {
         </View>
         <View style={styles.valuesContainer}>
           <Text style={styles.price}>336.84</Text>
-          <Text style={styles.priceChangeDown}>-20.69</Text>
+          <Text style={styles.priceChangeDown}>-20.69%</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -53,14 +53,18 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'rgba(0, 0, 0, 0.25)',
     borderRadius: 16,
-    padding: 20,
+    padding: 10,
     alignItems: 'flex-start',
+    height: 375,
+    width: 180,
+    alignItems: 'center',
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: 'white',
     marginBottom: 10,
+    textAlign: 'center',
   },
   mover: {
     flexDirection: 'row',

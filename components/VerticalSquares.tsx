@@ -15,8 +15,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    gap: 20, 
-    paddingBottom: 20,
+    gap: 15, 
   },
 });
 
